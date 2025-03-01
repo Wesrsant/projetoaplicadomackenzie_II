@@ -1,0 +1,38 @@
+
+# Arquivos e pastas que não devem ser versionados
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.egg
+*.egg-info/
+*.log
+
+# Ambientes Virtuais
+.env
+.venv/
+ENV/
+env/
+venv/
+pip-log.txt
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# Sistema Operacional
+.DS_Store
+Thumbs.db
+
+# Arquivos temporários e de backup
+*~
+*.swp
+*.bak
+*.tmp
+
+# Dados sensíveis
+credentials.json
+secrets.yml
+keys/
