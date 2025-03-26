@@ -7,10 +7,8 @@ from sklearn.preprocessing import StandardScaler
 # Caminho relativo do dataset
 file_path = r"../../database/uber_stock_data.csv"
 
-
 # Função para carregar os dados e tratar exceções
 def load_data(file_path):
-
     try:
         df = pd.read_csv(file_path)
         print(f'Dados carregados com sucesso de {file_path}')
@@ -25,7 +23,8 @@ df = load_data(file_path)
 if df is None:
     raise SystemExit('Erro ao carregar os dados. O processo será encerrado.')
 
-# Verificando valores ausentes
+
+# Tratamento de valores ausentes usando diferentes estratégias: 'mean', 'drop', 'forward_fill', 'backward_fill'
 def handle_missing_values(df, strategy='mean'):
     print("Valores ausentes antes do tratamento:")
     print(df.isnull().sum())
@@ -47,9 +46,9 @@ def handle_missing_values(df, strategy='mean'):
 df = handle_missing_values(df, strategy='mean')
 
 
-# Removendo outliers (Z-score > 3)
+# Remoção de outliers com base no Z-score (considerando como outliers valores com Z-score > 3)
 def remove_outliers(df, columns):
-    df_filtered = df.copy()  # Criar uma cópia para evitar modificar a versão original inesperadamente
+    df_filtered = df.copy()  # Cria uma cópia do dataset
     rows_before = df_filtered.shape[0]
     
     for col in columns:
@@ -92,9 +91,11 @@ df['Year'] = df['Date'].dt.year
 df['Month'] = df['Date'].dt.month
 df['Day'] = df['Date'].dt.day
 
-# Estatísticas descritivas antes da normalização
+
+# Exibição das estatísticas descritivas dos dados antes da normalização para entender a distribuição
 print("\nEstatísticas descritivas antes da normalização:")
 print(df.describe())
+
 
 # Normalização dos dados (padronização) - excluindo a coluna 'Date' da normalização
 def normalize_data(df):
@@ -110,8 +111,24 @@ df = normalize_data(df)
 print("\nEstatísticas descritivas após a normalização:")
 print(df.describe())
 
+# Visualização das distribuições antes e depois da normalização
+for col in df.select_dtypes(include=[np.number]).columns.difference(['Year', 'Month', 'Day']):
+    plt.figure(figsize=(10, 6))
+    
+    # Antes da normalização
+    plt.subplot(1, 2, 1)
+    df[col].hist(bins=50, alpha=0.7)
+    plt.title(f'Antes da normalização: {col}')
+    
+    # Depois da normalização
+    plt.subplot(1, 2, 2)
+    df[col].hist(bins=50, alpha=0.7)
+    plt.title(f'Depois da normalização: {col}')
+    
+    plt.show()
 
-# Salvando os dados tratados para uso posterior
+
+# Salvando os dados tratados em um novo arquivo CSV ('dados_tratados.csv') para uso posterior
 if not df.empty:
     df.to_csv("dados_tratados.csv", index=False)
     print("Os dados tratados foram salvos em 'dados_tratados.csv'.")
