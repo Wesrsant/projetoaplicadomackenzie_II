@@ -7,6 +7,7 @@ from sklearn.preprocessing import StandardScaler
 # Caminho relativo do dataset
 file_path = r"../../database/uber_stock_data.csv"
 
+
 # Função para carregar os dados e tratar exceções
 def load_data(file_path):
     try:
@@ -17,6 +18,7 @@ def load_data(file_path):
     except FileNotFoundError:
         print(f'Erro: O arquivo {file_path} não foi encontrado.')
         return None
+
 
 # Carregar os dados
 df = load_data(file_path)
@@ -43,6 +45,7 @@ def handle_missing_values(df, strategy='mean'):
     print(df.isnull().sum())
     return df
 
+
 df = handle_missing_values(df, strategy='mean')
 
 
@@ -61,8 +64,10 @@ def remove_outliers(df, columns):
 
     return df_filtered  # Retornar a versão filtrada corretamente
 
+
 # Definindo as colunas para remoção de outliers (todas as colunas numéricas, exceto 'Year', 'Month' e 'Day')
 outlier_columns = df.select_dtypes(include=[np.number]).columns.difference(['Year', 'Month', 'Day'])
+
 
 # Removendo outliers com base nas colunas definidas
 df = remove_outliers(df, outlier_columns)
@@ -70,6 +75,7 @@ df = remove_outliers(df, outlier_columns)
 
 # Visualizar antes e depois da remoção de outliers
 df_no_outliers = remove_outliers(df.copy(), outlier_columns)
+
 
 for col in outlier_columns:
     plt.figure(figsize=(10, 6))
@@ -104,12 +110,15 @@ def normalize_data(df):
     df[numeric_cols] = scaler.fit_transform(df[numeric_cols])
     return df
 
+
 # Normalizar os dados
 df = normalize_data(df)
+
 
 # Estatísticas descritivas após a normalização
 print("\nEstatísticas descritivas após a normalização:")
 print(df.describe())
+
 
 # Visualização das distribuições antes e depois da normalização
 for col in df.select_dtypes(include=[np.number]).columns.difference(['Year', 'Month', 'Day']):
