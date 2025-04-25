@@ -110,5 +110,9 @@ Membros do grupo:
 
 
 ## Referências
+- Uber 
 - Uber Stocks Dataset 2025 (Kaggle)
-- Documentação das bibliotecas utilizadas (pandas, scikit-learn, statsmodels, etc.)
+- ADEBIYI et al. - Stock Price Prediction Using the ARIMA Model (2014)
+- IBM - Apresentando os modelos ARIMA (2024)
+- Analytics Vidhya - Stock Market Forecasting using Time Series Analysis (2024)
+- Alura - Métricas de avaliação para séries temporais (2021)
