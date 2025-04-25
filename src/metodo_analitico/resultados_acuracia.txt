@@ -1,0 +1,29 @@
+Métricas de Avaliação do Modelo ARIMA - Previsão de Ações da Uber
+=================================================================
+
+1. Métricas de Erro:
+- MAE (Erro Médio Absoluto): 6.5976
+- RMSE (Raiz do Erro Quadrático Médio): 8.2071
+- MAPE (Erro Percentual Absoluto Médio): 9.92%
+- R² (Coeficiente de Determinação): -1.0825
+
+2. Métricas de Acurácia:
+- Acurácia global (100% - MAPE): 90.08%
+- Acurácia da direção (tendência): 48.25%
+- Previsões com erro < 5%: 37.76%
+- Previsões com erro < 10%: 60.84%
+- Correlação entre valores reais e previstos: -0.2556
+
+3. Interpretação dos Resultados:
+- O modelo apresenta uma acurácia global de 90.08%
+- 60.8% das previsões têm erro menor que 10%
+- O modelo prevê corretamente a direção do movimento em 48.25% dos casos
+
+4. Pontos Fortes e Limitações:
+Pontos Fortes:
+- Capacidade de prever a direção do movimento em 48.25% dos casos
+- 60.8% das previsões com erro menor que 10%
+
+Limitações:
+- Dificuldade em capturar a volatilidade do mercado de ações
+- Não considera fatores externos como notícias e eventos econômicos
