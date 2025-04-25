@@ -23,7 +23,7 @@ Nosso objetivo é realizar uma análise exploratória abrangente, seguida da apl
 ## Scripts
 
 ### 1. analise_exploratoria.py
-local: src\analise_exploratoria\analise_exploratoria.py
+`local: src\analise_exploratoria\analise_exploratoria.py`
 
 Este script realiza uma análise exploratória detalhada dos dados históricos das ações da Uber.
 
@@ -46,7 +46,7 @@ Este script realiza uma análise exploratória detalhada dos dados históricos d
 O script gera insights detalhados sobre evolução de preço, volatilidade, volume de negociação, estacionariedade e padrões sazonais das ações da Uber.
 
 ### 2. normalizacao.py
-local: src\normalizacao\normalizacao.py
+`local: src\normalizacao\normalizacao.py`
 
 Este script prepara os dados para modelagem, realizando normalização e tratamento de outliers.
 
@@ -63,7 +63,7 @@ Este script prepara os dados para modelagem, realizando normalização e tratame
 O script é fundamental para garantir que os dados estejam limpos e padronizados antes da aplicação de modelos de aprendizado de máquina ou análise estatística.
 
 ### 3. Aplicação do método analítico.ipynb
-local: src\metodo_analitico\Aplicação do método analítico.ipynb
+`local: src\metodo_analitico\Aplicação do método analítico.ipynb`
 
 Este notebook implementa um modelo ARIMA para previsão do preço de ações da Uber.
 
@@ -83,7 +83,7 @@ Este notebook implementa um modelo ARIMA para previsão do preço de ações da 
 O notebook implementa uma abordagem completa de análise de séries temporais, desde a preparação dos dados até a avaliação do modelo preditivo.
 
 ### 4. medidas_de_acuracia.py
-local:src\metodo_analitico\medidas de acuracia.py
+`local:src\metodo_analitico\medidas de acuracia.py`
 
 Este script avalia a qualidade das previsões geradas pelo modelo ARIMA.
 
@@ -121,7 +121,7 @@ O arquivo `requirements.txt` contém todas as dependências necessárias para ex
 - pmdarima
 
 Para instalar as dependências, execute:
-pip install -r requirements.txt
+`pip install -r requirements.txt`
 
 
 ## Como Executar
@@ -136,20 +136,6 @@ Membros do grupo:
 - Gustavo Jose Fermiano
 - Kelly Haro Vasconcellos 
 - Wesley Rodrigo Dos Santos
-
-## Referências
-
-- Uber Stocks Dataset 2025 (Kaggle)
-- Documentação das bibliotecas utilizadas (pandas, scikit-learn, statsmodels, etc.)
-
-
-## Contribuições
-Membros do grupo:
-
-* Gustavo Jose Fermiano
-* Kelly Haro Vasconcellos 
-* Wesley Rodrigo Dos Santos 
-
 
 
 ## Referências
