@@ -25,45 +25,88 @@ Nosso objetivo é realizar uma análise exploratória abrangente, seguida da apl
 ### 1. analise_exploratoria.py
 local: src\analise_exploratoria\analise_exploratoria.py
 
-Realiza uma análise exploratória detalhada dos dados históricos das ações da Uber.
+Este script realiza uma análise exploratória detalhada dos dados históricos das ações da Uber.
 
-Funcionalidades:
-- Análise de tendências e crescimento
-- Estudo de volatilidade e risco
-- Identificação de padrões sazonais
-- Análise de volume e liquidez
+## Funcionalidades
+
+- Carrega dados históricos das ações da Uber a partir de um arquivo CSV
+- Calcula métricas importantes como retornos diários, amplitude de preços e variação percentual
+- Realiza análise de tendência utilizando regressão linear
+- Testa a estacionariedade da série temporal com o teste Dickey-Fuller
+- Identifica outliers no volume de negociação
+- Analisa padrões sazonais por mês e ano
+
+## Principais Visualizações
+
+1. Tendência e Crescimento - Mostra a evolução do preço das ações com tendência linear e médias móveis
+2. Volatilidade e Risco - Apresenta os retornos diários com destaque para variações extremas
+3. Sazonalidade e Padrões - Exibe o preço médio por mês do ano
+4. Volume e Liquidez - Mostra o volume de negociações diárias com outliers destacados
+
+O script gera insights detalhados sobre evolução de preço, volatilidade, volume de negociação, estacionariedade e padrões sazonais das ações da Uber.
 
 ### 2. normalizacao.py
 local: src\normalizacao\normalizacao.py
 
-Prepara os dados para modelagem, realizando normalização e tratamento de outliers.
+Este script prepara os dados para modelagem, realizando normalização e tratamento de outliers.
 
-Funcionalidades:
-- Tratamento de valores ausentes
-- Remoção de outliers
-- Normalização de variáveis numéricas
-- Visualização de distribuições antes e depois do tratamento
+## Funcionalidades
+
+- Carrega dados das ações da Uber a partir de um arquivo CSV
+- Trata valores ausentes utilizando diferentes estratégias (média, remoção, preenchimento)
+- Remove outliers com base no Z-score (valores que se afastam mais de 3 desvios padrões da média)
+- Extrai informações temporais da coluna de data (ano, mês, dia)
+- Normaliza os dados numéricos utilizando StandardScaler (padronização)
+- Visualiza as distribuições antes e depois do tratamento
+- Salva os dados tratados em um novo arquivo CSV
+
+O script é fundamental para garantir que os dados estejam limpos e padronizados antes da aplicação de modelos de aprendizado de máquina ou análise estatística.
 
 ### 3. Aplicação do método analítico.ipynb
 local: src\metodo_analitico\Aplicação do método analítico.ipynb
 
 Este notebook implementa um modelo ARIMA para previsão do preço de ações da Uber.
 
-Funcionalidades:
-- Carregamento e preparação de dados
-- Análise de estacionariedade
-- Modelagem ARIMA
-- Previsão de preços futuros
+## Funcionalidades
+
+- Instala e importa bibliotecas necessárias (numpy, pandas, matplotlib, statsmodels, pmdarima)
+- Carrega dados tratados das ações da Uber
+- Verifica a inexistência de valores ausentes
+- Plota os valores de fechamento das ações ao longo do tempo
+- Realiza teste de estacionariedade utilizando o teste Dickey-Fuller
+- Aplica decomposição da série temporal para identificar tendência e sazonalidade
+- Utiliza auto_arima para determinar os melhores parâmetros do modelo ARIMA
+- Divide os dados em conjuntos de treinamento e teste
+- Treina o modelo ARIMA com os parâmetros otimizados
+- Realiza previsões e avalia o desempenho do modelo
+
+O notebook implementa uma abordagem completa de análise de séries temporais, desde a preparação dos dados até a avaliação do modelo preditivo.
 
 ### 4. medidas_de_acuracia.py
 local:src\metodo_analitico\medidas de acuracia.py
 
-Avalia a qualidade das previsões geradas pelo modelo ARIMA.
+Este script avalia a qualidade das previsões geradas pelo modelo ARIMA.
 
-Funcionalidades:
-- Cálculo de métricas de erro: MAE, RMSE, MAPE
-- Avaliação da acurácia direcional
-- Visualização de resultados
+## Funcionalidades
+
+- Carrega os dados reais e previstos das ações da Uber
+- Mescla os dados por data para facilitar a comparação
+- Calcula métricas de erro:
+  - MAE (Erro Médio Absoluto)
+  - RMSE (Raiz do Erro Quadrático Médio)
+  - MAPE (Erro Percentual Absoluto Médio)
+  - R² (Coeficiente de Determinação)
+- Calcula métricas de acurácia:
+  - Acurácia global (100% - MAPE)
+  - Acurácia da direção (% de acerto na tendência)
+  - Percentual de previsões com erro abaixo de limiares (5% e 10%)
+- Gera visualizações:
+  - Comparação entre valores reais e previstos
+  - Gráfico de dispersão
+  - Distribuição das previsões por faixa de erro
+- Salva os resultados em arquivo de texto e as visualizações em imagens
+
+O script fornece uma avaliação abrangente do desempenho do modelo, identificando pontos fortes e limitações das previsões realizadas.
 
 ## Requisitos e Instalação
 
