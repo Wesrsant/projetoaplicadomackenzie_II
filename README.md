@@ -1,7 +1,14 @@
 # Análise de Ações da Uber (2019-2025) 
 
-## Metadados
-Utilizaremos a base de dados "Uber Stocks Dataset 2025" disponível no Kaggle, que contém informações textuais relacionadas ao desempenho das ações da Uber. Os metadados incluirão a origem dos dados, a estrutura textual, como colunas que representam preços de abertura, fechamento, volume de ações, datas e a descrição dos indicadores. Essa apresentação nos permitirá entender melhor a qualidade e a relevância dos dados para nossa análise.
+Este repositório contém dados e análises relacionadas à previsão do comportamento das ações da Uber Technologies Inc. (UBER), desenvolvido como parte do Projeto Integrador II do curso de Tecnologia em Ciência de Dados da Universidade Presbiteriana Mackenzie. A análise visa aplicar métodos estatísticos e de aprendizado de máquina para compreender e prever tendências do mercado de ações da Uber.
+
+# Visão Geral
+A Uber é uma das empresas que mais transformaram o setor de mobilidade urbana nas últimas décadas, redefinindo não apenas o transporte, mas também as relações trabalhistas através da "uberização". Este projeto aborda:
+
+- Análise exploratória dos dados históricos das ações da Uber (maio/2019 - fevereiro/2025)
+- Modelagem preditiva utilizando técnicas de séries temporais (ARIMA)
+- Avaliação de performance através de métricas de acurácia e erro
+- Desenvolvimento do produto "Uber Insights" - plataforma de apoio à decisão para investidores
 
 ## Objetivos e Metas
 Nosso objetivo é realizar uma análise exploratória abrangente, seguida da aplicação de técnicas de aprendizado de máquina para prever o comportamento das ações da Uber. As metas específicas incluem:
@@ -13,6 +20,33 @@ Nosso objetivo é realizar uma análise exploratória abrangente, seguida da apl
 3. **Identificação de Padrões:** Aplicar métodos de regressão para identificar padrões nos preços históricos das ações e analisar fatores que impactam essas variações.
 
 4. **Classificação de Preços:** Desenvolver um modelo de classificação que prevê se o preço de fechamento das ações será alto ou baixo, com base em variáveis relevantes.
+
+
+# Principais Descobertas
+A análise revelou insights importantes sobre o comportamento das ações da Uber:
+
+- Crescimento consistente: Valorização de 55,11% no período analisado, com tendência de alta de $0,015 por dia
+- Alta volatilidade: Desvio padrão dos retornos diários de 3,36%, com variações extremas de até 38,26%
+- Sazonalidade identificada: Preços médios mais altos em fevereiro ($49,03) e mais baixos em maio ($42,02)
+- Boa liquidez: Volume médio diário de 24,3 milhões de ações negociadas
+
+# Modelo de Previsão
+O modelo ARIMA (4,1,0) desenvolvido apresentou:
+
+- Acurácia global: 90,08% (MAPE de 9,92%)
+- Eficácia em tendências: Boa capacidade para previsões de médio e longo prazo
+- Limitações: Dificuldade em capturar oscilações abruptas de curto prazo devido à alta volatilidade do ativo
+
+# Produto Gerado: Uber Insights
+Como resultado prático da pesquisa, foi conceptualizado o Uber Insights - uma plataforma de apoio à decisão que oferece:
+
+- Previsão de tendências de preços
+- Monitoramento de volatilidade anormal
+- Dashboard com análise de risco baseada em dados históricos
+- Relatórios preditivos customizados para investidores individuais e institucionais
+
+## Metadados
+Utilizaremos a base de dados "Uber Stocks Dataset 2025" disponível no Kaggle, que contém informações textuais relacionadas ao desempenho das ações da Uber. Os metadados incluirão a origem dos dados, a estrutura textual, como colunas que representam preços de abertura, fechamento, volume de ações, datas e a descrição dos indicadores. Essa apresentação nos permitirá entender melhor a qualidade e a relevância dos dados para nossa análise.
 
 ## Estrutura do Projeto
 
@@ -136,6 +170,10 @@ Membros do grupo:
 - Gustavo Jose Fermiano
 - Kelly Haro Vasconcellos 
 - Wesley Rodrigo Dos Santos
+
+## Links
+- Link da apresentação no YouTube
+- [Material de Apoio PPT]([url](https://docs.google.com/presentation/d/1TCHCQ4E6fIqW0cbiiqHnzFWHVUIJ_e-Hx0h2g3yDyW8/edit?slide=id.g4dfce81f19_0_45#slide=id.g4dfce81f19_0_45))
 
 
 ## Referências
