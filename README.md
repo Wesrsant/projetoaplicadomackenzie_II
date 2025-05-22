@@ -173,7 +173,7 @@ Membros do grupo:
 
 ## Links
 - Link da apresentação no YouTube
-- [Material de Apoio PPT]([url](https://docs.google.com/presentation/d/1TCHCQ4E6fIqW0cbiiqHnzFWHVUIJ_e-Hx0h2g3yDyW8/edit?slide=id.g4dfce81f19_0_45#slide=id.g4dfce81f19_0_45))
+- [Material de Apoio PPT](https://docs.google.com/presentation/d/1TCHCQ4E6fIqW0cbiiqHnzFWHVUIJ_e-Hx0h2g3yDyW8/edit?slide=id.g4dfce81f19_0_45#slide=id.g4dfce81f19_0_45)
 
 
 ## Referências
